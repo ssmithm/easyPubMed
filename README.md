@@ -7,8 +7,8 @@ With support added for scraping PubMed "My Bibliography" links, and (in the futu
 Install this fork from GitHub with:
 
 ```{r, eval = FALSE}
-# install.packages("pak")
-pak::pak("ssmithm/easyPubMed")
+# install.packages("devtools")
+devtools::install_github("ssmithm/easyPubMed")
 ```
 
 ## Usage
