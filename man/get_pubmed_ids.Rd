@@ -7,28 +7,29 @@
 get_pubmed_ids(pubmed_query_string, api_key = NULL)
 }
 \arguments{
-\item{pubmed_query_string}{is a string (character vector of length 1) that is used 
-for querying PubMed (standard PubMed synthax, see reference for details).}
+\item{pubmed_query_string}{is a string (character vector of length 1) that is used
+for querying PubMed (standard PubMed synthax, see reference for details), or a
+valid URL for a curated PubMed bibliography.}
 
-\item{api_key}{String (character vector of length 1): user-specific API key to 
+\item{api_key}{String (character vector of length 1): user-specific API key to
 increase the limit of queries per second. You can obtain your key from NCBI.}
 }
 \value{
-The function returns a list. The list includes the number of records found on PubMed and 
-the first 20 PubMed IDs (UID) retrieved by the query. The list also includes QueryKey and WebEnv 
+The function returns a list. The list includes the number of records found on PubMed and
+the first 20 PubMed IDs (UID) retrieved by the query. The list also includes QueryKey and WebEnv
 that are required for a subsequent fetch_pubmed_data() call.
 }
 \description{
-Query PubMed (Entrez) in a simple way via the PubMed API eSearch function. 
-Calling this function results in posting the query results on the PubMed History Server. 
-This allows later access to the resulting data via the fetch_pubmed_data() function, 
+Query PubMed (Entrez) in a simple way via the PubMed API eSearch function.
+Calling this function results in posting the query results on the PubMed History Server.
+This allows later access to the resulting data via the fetch_pubmed_data() function,
 or other easyPubMed functions.
 }
 \details{
-This function will use the String provided as argument for querying PubMed via the eSearch 
-function of the PubMed API. The Query Term can include one or multiple words, as well as the standard 
-PubMed operators (AND, OR, NOT) and tags (i.e., [AU], [PDAT], [Affiliation], and so on). ESearch will 
-post the UIDs resulting from the search operation onto the History server so that they can be used directly 
+This function will use the String provided as argument for querying PubMed via the eSearch
+function of the PubMed API. The Query Term can include one or multiple words, as well as the standard
+PubMed operators (AND, OR, NOT) and tags (i.e., [AU], [PDAT], [Affiliation], and so on). ESearch will
+post the UIDs resulting from the search operation onto the History server so that they can be used directly
 in a subsequent fetchPubmedData() call.
 }
 \examples{

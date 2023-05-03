@@ -6,9 +6,9 @@
 \alias{easyPubMed-package}
 \title{Retrieve and Process Scientific Publication Records from Pubmed}
 \description{
-Query NCBI Entrez and retrieve PubMed records in XML or TXT format. PubMed records 
-can be downloaded and saved as XML or text files. Data integrity is enforced during data download, 
-allowing to retrieve and save very large number of records effortlessly. PubMed records can be processed 
+Query NCBI Entrez and retrieve PubMed records in XML or TXT format. PubMed records
+can be downloaded and saved as XML or text files. Data integrity is enforced during data download,
+allowing to retrieve and save very large number of records effortlessly. PubMed records can be processed
 to extract publication- and author-specific information.
 }
 \examples{
@@ -17,7 +17,7 @@ try({
   dami_query_string <- "Damiano Fantini[AU]"
   dami_on_pubmed <- get_pubmed_ids(dami_query_string)
   dami_papers <- fetch_pubmed_data(dami_on_pubmed, format = "abstract")
-  dami_papers[dami_papers == ""] <- "\\n"
+  dami_papers[dami_papers == ""] <- "\n"
   cat(paste(dami_papers[1:65], collapse = ""))
   #
 }, silent = TRUE)
@@ -34,16 +34,16 @@ print(titles)
 ## Example 03: retrieve data from PubMed and save as XML file
 ml_query <- "Machine Learning[TI] AND 2016[PD]"
 out1 <- batch_pubmed_download(pubmed_query_string = ml_query, batch_size = 180)
-x <- paste(readLines(out1[1], n = 10), collapse = "\\n")
+x <- paste(readLines(out1[1], n = 10), collapse = "\n")
 cat(x)
 #
 ## Example 04: retrieve data from PubMed and save as TXT file
 ml_query <- "Machine Learning[TI] AND 2016[PD]"
 out2 <- batch_pubmed_download(pubmed_query_string = ml_query, batch_size = 180, format = "medline")
-x <- paste(readLines(out1[1], n = 30), collapse = "\\n")
+x <- paste(readLines(out1[1], n = 30), collapse = "\n")
 cat(x)
 #
-## Example 05: extract information from a single PubMed record 
+## Example 05: extract information from a single PubMed record
 ml_query <- "Machine Learning[TI] AND 2016[PD]"
 out3 <- batch_pubmed_download(pubmed_query_string = ml_query, batch_size = 180)
 PM_data <- articles_to_list(out3[1])
@@ -51,7 +51,7 @@ PM_record_df <- article_to_df(PM_data[[80]])
 print(PM_record_df[1,])
 print(PM_record_df[,"address"])
 #
-## Example 06: query PubMed and extract information from multiple records in one step 
+## Example 06: query PubMed and extract information from multiple records in one step
 ml_query <- "Machine Learning[TI] AND 2016[PD]"
 out4 <- batch_pubmed_download(pubmed_query_string = ml_query, batch_size = 180)
 PM_tab <- table_articles_byAuth(out4[1], autofill = TRUE, included_authors = "last")
@@ -66,7 +66,7 @@ PM_tab[50:70,c("pmid", "jabbrv", "year", "lastname", "address")]
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://www.data-pulse.com/dev_site/easypubmed/}
+  \item \url{https://github.com/ssmithm/easyPubMed}
 }
 
 }

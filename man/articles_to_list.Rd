@@ -7,31 +7,31 @@
 articles_to_list(pubmed_data, encoding = "UTF8", simplify = TRUE)
 }
 \arguments{
-\item{pubmed_data}{String corresponding to the name of an XML file (typically, 
-the result of a batch_pubmed_download() call). Alternatively, a string including 
+\item{pubmed_data}{String corresponding to the name of an XML file (typically,
+the result of a batch_pubmed_download() call). Alternatively, a string including
 PubMed records with XML tags, such as the object returned by a fetch_pubmed_data() call.}
 
-\item{encoding}{The encoding of an input/output connection can be specified by name 
-(for example, "ASCII", or "UTF-8", in the same way as it would be given to the 
-function base::iconv(). See iconv() help page for how to find out more about encodings 
+\item{encoding}{The encoding of an input/output connection can be specified by name
+(for example, "ASCII", or "UTF-8", in the same way as it would be given to the
+function base::iconv(). See iconv() help page for how to find out more about encodings
 that can be used on your platform. "UTF-8" is recommended.}
 
-\item{simplify}{Logical; should the result be simplified to a character vector. 
+\item{simplify}{Logical; should the result be simplified to a character vector.
 If FALSE, results are returned as a list.}
 }
 \value{
-List or character vector including all the records from the original XML object in text format. 
+List or character vector including all the records from the original XML object in text format.
 Elements in the list are not named and are only accessible via their numeric index.
 }
 \description{
-Convert an XML object of PubMed records into a list of strings 
-(character vector of length 1) corresponding to individual PubMed articles. 
-PubMed records are identified by a "/PubmedArticle" XML tag. This automatically casts 
+Convert an XML object of PubMed records into a list of strings
+(character vector of length 1) corresponding to individual PubMed articles.
+PubMed records are identified by a "/PubmedArticle" XML tag. This automatically casts
 all the content of each PubMed record to a character-class object without removing XML tags.
 }
 \details{
 The input is an XML object or a string including PubMed records (with XML tags). These are the
-output of easyPubMed functions: fetch_pubmed_data() or batch_pubmed_download(). 
+output of easyPubMed functions: fetch_pubmed_data() or batch_pubmed_download().
 The function returns a list or a character vector where each element is a different PubMed record.
 }
 \examples{

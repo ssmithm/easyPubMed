@@ -9,12 +9,12 @@ fetch_PMID_data(pmids, format = "xml", encoding = "UTF-8", verbose = TRUE)
 \arguments{
 \item{pmids}{list of PubMed Ids (PMIDs)}
 
-\item{format}{Character: element specifying the output format. The following values are allowed: 
+\item{format}{Character: element specifying the output format. The following values are allowed:
 c("asn.1", "xml", "medline", "uilist", "abstract").}
 
-\item{encoding}{The encoding of an input/output connection can be specified by name 
-(for example, "ASCII", or "UTF-8", in the same way as it would be given to the function base::iconv(). 
-See iconv() help page for how to find out more about encodings that can be used on your platform. 
+\item{encoding}{The encoding of an input/output connection can be specified by name
+(for example, "ASCII", or "UTF-8", in the same way as it would be given to the function base::iconv().
+See iconv() help page for how to find out more about encodings that can be used on your platform.
 Here, we recommend using "UTF-8".}
 
 \item{verbose}{logical, shall info about the processing status be printed to console}
@@ -23,7 +23,7 @@ Here, we recommend using "UTF-8".}
 List of PubMed articles .
 }
 \description{
-Retrieve PubMed Data using a list of PubMed Ids (PMIDs) as input. 
+Retrieve PubMed Data using a list of PubMed Ids (PMIDs) as input.
 Results are returned as a list of PubMed articles.
 }
 \references{

@@ -13,12 +13,12 @@ trim_address(addr)
 Character string including a formatted and trimmed address (if available).
 }
 \description{
-Set of rules for trimming and standardizing the format of address information 
-retrieved from PubMed records. Affiliations including more than one address will be trimmend 
+Set of rules for trimming and standardizing the format of address information
+retrieved from PubMed records. Affiliations including more than one address will be trimmend
 and only the first address will be returned.
 }
 \examples{
-addr_string <- " 2 Dept of Urology, Feinberg School of Medicine," 
+addr_string <- " 2 Dept of Urology, Feinberg School of Medicine,"
 addr_string <- paste(addr_string, "Chicago, US; Dept of Mol Bio as well...")
 print(addr_string)
 print(trim_address(addr = addr_string))

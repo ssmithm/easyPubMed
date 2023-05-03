@@ -13,11 +13,11 @@ fetch_all_pubmed_ids(pubmed_id_list)
 Character vector including all PMID (PubMed Identifiers) returned by the current query.
 }
 \description{
-Retrieve PubMed record identifiers from Entrez following a search performed 
+Retrieve PubMed record identifiers from Entrez following a search performed
 via the get_pubmed_ids() function. Identifiers are returned as a character vector.
 }
 \details{
-Retrieve PubMed identifiers, without any other information (such as article title, 
+Retrieve PubMed identifiers, without any other information (such as article title,
 authors, publication date, and so on). The PubMed IDs can be stored or used with other software.
 }
 \examples{

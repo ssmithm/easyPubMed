@@ -4,12 +4,14 @@
 \name{PubMed_stopwords}
 \alias{PubMed_stopwords}
 \title{PubMed Query Stopwords}
-\format{A character vector including all PubMed stopwords tat are typically filtered out from queries.}
+\format{
+A character vector including all PubMed stopwords tat are typically filtered out from queries.
+}
 \usage{
 data("PubMed_stopwords")
 }
 \description{
-Collection of 133 Stopwords that can be removed from query strings to improve the 
+Collection of 133 Stopwords that can be removed from query strings to improve the
              accuracy of exact-match PubMed queries.
 }
 \details{

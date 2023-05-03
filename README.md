@@ -1,10 +1,18 @@
-# easyPubMed latest dev version
+# easyPubMed fork (dev version)
 
-**Note**
-At this moment, `easyPubMed` only supports retrieving 10,000 records per query. This is due to some recent changes in the NCBI E-utilities (see: <https://ncbiinsights.ncbi.nlm.nih.gov/2022/09/13/updated-pubmed-eutilities/>). This is a known issue/limitation. I'll try to re-write the R library to account for the changes in the E-utilities as soon as possible (likely, within a few months). Thanks for your patience. 
+With support added for scraping PubMed "My Bibliography" links, and (in the future) visualizations. 
 
-**Reminder**
-- There is only one person maintaining this R package
-- I work on code updates in my spare time and for free
-- Take-home message: please, be patient...
+## Installation
 
+Install this fork from GitHub with:
+
+```{r, eval = FALSE}
+# install.packages("pak")
+pak::pak("ssmithm/easyPubMed")
+```
+
+## Usage
+
+Explore the [easyPubMed vignettes](https://www.data-pulse.com/dev_site/easypubmed/) for use of the main package.
+
+For scraping My Bibliography, the main function is `get_pubmed_bib()` which accepts the base URL of a My Bibliography page, and outputs a data.frame of citation data. 

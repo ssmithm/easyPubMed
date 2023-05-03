@@ -4,7 +4,8 @@
 \name{EPMsamples}
 \alias{EPMsamples}
 \title{PubMed Records downloaded and analyzed via easyPubMed}
-\format{The dataset is formatted as a list including 4 elements: 
+\format{
+The dataset is formatted as a list including 4 elements:
 
 * `DF_papers_abs`: List of 4
 
@@ -12,13 +13,14 @@
 
 * `NUBL_dw18`: List of 3
 
-* `NUBL_1618`: List of 5}
+* `NUBL_1618`: List of 5
+}
 \usage{
 data("EPMsamples")
 }
 \description{
-This dataset includes a collection of 4 examples showing how to download and analyze records 
-from PubMed by using easyPubMed. Each element in the EPMsamples list corresponds to a different query 
+This dataset includes a collection of 4 examples showing how to download and analyze records
+from PubMed by using easyPubMed. Each element in the EPMsamples list corresponds to a different query
 and/or analysis. Also, each element of EPMsamples is a list including intermediates and notes about the analysis.
 }
 \details{

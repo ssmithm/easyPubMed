@@ -7,7 +7,7 @@
 custom_grep(xml_data, tag, format = "list")
 }
 \arguments{
-\item{xml_data}{String (of class character and length 1): corresponds to the PubMed 
+\item{xml_data}{String (of class character and length 1): corresponds to the PubMed
 record or any string including XML/HTML tags.}
 
 \item{tag}{String (of class character and length 1): the tag of interest (does NOT include < > chars).}
@@ -18,18 +18,18 @@ record or any string including XML/HTML tags.}
 List or vector where each element corresponds to an in-tag substring.
 }
 \description{
-Extract text form a string containing XML or HTML tags. Text 
-included between tags of interest will be returned. If multiple tagged substrings are found, 
+Extract text form a string containing XML or HTML tags. Text
+included between tags of interest will be returned. If multiple tagged substrings are found,
 they will be returned as different elements of a list or character vector.
 }
 \details{
-The input string has to be a character string (length 1) containing tags (HTML or XML format). 
+The input string has to be a character string (length 1) containing tags (HTML or XML format).
 If an XML Document is provided as input, the function will rise an error.
 }
 \examples{
 try({
   ## extract substrings based on regular expressions
-  string_01 <- "I can't wait to watch the <strong>Late Night Show with" 
+  string_01 <- "I can't wait to watch the <strong>Late Night Show with"
   string_01 <- paste(string_01, "Seth Meyers</strong> tonight at <strong>11:30</strong>pm CT!")
   print(string_01)
   custom_grep(xml_data = string_01, tag = "strong", format = "char")
